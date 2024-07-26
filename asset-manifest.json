@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a13b573.css",
-    "main.js": "/static/js/main.ad318515.js",
-    "static/js/453.906b0208.chunk.js": "/static/js/453.906b0208.chunk.js",
-    "static/media/tanner-atkin-nobg.png": "/static/media/tanner-atkin-nobg.3171830a032825809298.png",
-    "index.html": "/index.html",
-    "main.6a13b573.css.map": "/static/css/main.6a13b573.css.map",
-    "main.ad318515.js.map": "/static/js/main.ad318515.js.map",
-    "453.906b0208.chunk.js.map": "/static/js/453.906b0208.chunk.js.map"
+    "main.css": "/tanner-atkin-xyz/static/css/main.6a13b573.css",
+    "main.js": "/tanner-atkin-xyz/static/js/main.bcd4a31b.js",
+    "static/js/453.906b0208.chunk.js": "/tanner-atkin-xyz/static/js/453.906b0208.chunk.js",
+    "static/media/tanner-atkin-nobg.png": "/tanner-atkin-xyz/static/media/tanner-atkin-nobg.3171830a032825809298.png",
+    "index.html": "/tanner-atkin-xyz/index.html",
+    "main.6a13b573.css.map": "/tanner-atkin-xyz/static/css/main.6a13b573.css.map",
+    "main.bcd4a31b.js.map": "/tanner-atkin-xyz/static/js/main.bcd4a31b.js.map",
+    "453.906b0208.chunk.js.map": "/tanner-atkin-xyz/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a13b573.css",
-    "static/js/main.ad318515.js"
+    "static/js/main.bcd4a31b.js"
   ]
 }
