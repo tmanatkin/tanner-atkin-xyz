@@ -1,0 +1,395 @@
+/* CSS */
+
+:root {
+  --color-primary: #cc603e;
+  --color-secondary: #1f005c;
+  --color-offwhite: #fafafa;
+  --color-offblack: #222;
+  --color-darkgrey: #555;
+  --color-lightgrey: #aaa;
+  --color-superlightgrey: #ddd;
+  /* --background-gradient: linear-gradient(to bottom right, red, orange, yellow); */
+  --background-gradient: linear-gradient(
+    to top left,
+    #d7b91f,
+    /* #daa705,
+    #dd9500,
+    #de8200,
+    #de6e00,
+    #dc5803,
+    #d93f12, */
+      #d51d1d
+  );
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-offwhite);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+#section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding: 0 0 25px 0;
+}
+
+/* Header */
+
+header {
+  height: 100vh;
+  min-height: 800px;
+  width: 1300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#name-container {
+  margin: 0 50px 0 0;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-offblack);
+}
+
+#name-container > h1 span {
+  color: transparent;
+  background-image: var(--background-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-attachment: fixed;
+}
+
+#rotating-title-container {
+  background-color: var(--color-offwhite);
+  position: relative;
+  height: 6em;
+  margin: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#rotating-title-container::before,
+#rotating-title-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.75em;
+  z-index: 1;
+}
+
+#rotating-title-container::before {
+  top: 0;
+  background: linear-gradient(to top, transparent, var(--color-offwhite));
+}
+
+#rotating-title-container::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, var(--color-offwhite));
+}
+
+#rotating-title-container h1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header img {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+}
+
+/* Sections */
+
+section {
+  width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h2 {
+  text-align: center;
+  color: var(--color-offblack);
+  font-size: 2.5em;
+  margin: 0;
+}
+
+section a {
+  font-size: 1.25em;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 50px;
+  border-radius: 5px;
+
+  color: var(--color-offwhite);
+  /* border: 2px solid var(--color-primary); */
+
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+
+  transition: 0.3s ease;
+}
+
+section a:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Skills */
+
+.skill-section {
+  gap: 50px;
+}
+
+.skill-section div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 40px 60px;
+}
+
+.skill-section div h3 {
+  font-size: 3.25em;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  border-radius: 0.75em;
+  color: var(--color-offwhite);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+}
+
+/* Resume */
+
+.resume-section {
+  gap: 15px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: calc(100% - 100px);
+  padding: 0px 50px;
+  margin: 50px 0 0 0;
+  background-color: var(--color-superlightgrey);
+}
+
+footer a,
+footer p {
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--color-darkgrey);
+  display: inline;
+}
+
+footer p:first-child {
+  text-align: left;
+}
+
+footer a {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer p:last-child {
+  text-align: right;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer svg {
+  fill: var(--color-darkgrey);
+  margin: 0 0 0 5px;
+}
+
+/* Smaller Desktop Display */
+
+@media only screen and (max-width: 1500px) {
+  header {
+    width: 1000px;
+    min-height: 650px;
+  }
+
+  section {
+    width: 1000px;
+  }
+
+  .skill-section div {
+    gap: 40px 50px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .skill-section div h3 {
+    font-size: 2.5em;
+  }
+}
+
+/* Large Mobile (Tablet) */
+
+@media only screen and (max-width: 1100px) {
+  header {
+    flex-direction: column;
+    width: 600px;
+    min-height: 700px;
+    height: 90vh;
+  }
+
+  section {
+    width: 600px;
+    max-width: 80vw;
+  }
+
+  .skill-section div {
+    gap: 30px;
+  }
+
+  #name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 50px 0;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  #rotating-title-container {
+    height: 4em;
+  }
+
+  header img {
+    width: 75%;
+  }
+
+  .skill-section div h3 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  footer {
+    padding: 0px 25px;
+    width: calc(100% - 50px);
+  }
+
+  footer a,
+  footer p {
+    font-size: 0.75em;
+  }
+
+  footer svg {
+    height: 0.75em;
+    width: 0.75em;
+  }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 600px) {
+  header {
+    width: 100vw;
+  }
+
+  h2 {
+    width: 80%;
+  }
+
+  footer a {
+    text-decoration: underline;
+  }
+
+  footer svg {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+
+@media only screen and (max-width: 400px) {
+  body {
+    min-width: 320px;
+  }
+
+  header {
+    min-height: 550px;
+    min-width: 320px;
+  }
+
+  section {
+    width: 310px;
+  }
+
+  #cardContainer {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .skill-section div {
+    gap: 20px;
+  }
+
+  .skill-section div h3 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .card h3 {
+    font-size: 1.5em;
+  }
+}
