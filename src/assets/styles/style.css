@@ -146,27 +146,47 @@ section h2 {
   margin: 0;
 }
 
-section a {
-  font-size: 1.25em;
-  font-weight: 500;
-  text-decoration: none;
-  text-align: center;
-  padding: 20px 50px;
-  border-radius: 5px;
-
-  color: var(--color-offwhite);
-  /* border: 2px solid var(--color-primary); */
-
+.hover-gradient-button {
   background-image: var(--background-gradient);
   background-attachment: fixed;
-
-  transition: 0.3s ease;
+  padding: 0px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-section a:hover {
-  color: transparent;
+.hover-gradient-button .button-background {
+  background-color: transparent;
+  border-radius: 2px;
+  transition: 0.3s;
+  padding: 8px;
+}
+
+.hover-gradient-button span {
+  display: flex;
+  padding: 20px 50px;
+  color: var(--color-offwhite);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
+  transition: 0.3s;
+}
+
+.hover-gradient-button:hover {
+  padding: 8px;
+}
+
+.hover-gradient-button:hover .button-background {
+  background-color: var(--color-offwhite);
+  padding: 0px;
+}
+
+.hover-gradient-button:hover span {
+  color: transparent;
 }
 
 /* Skills */
