@@ -4,7 +4,7 @@ const Header = () => {
       <h2>Take a look at my resume.</h2>
       <a
         className="hover-gradient-button"
-        href="/Tanner_Atkin_Resume.pdf"
+        href="Tanner_Atkin_Resume.pdf"
         target="_blank"
       >
         <div className="button-background">
