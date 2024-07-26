@@ -4,7 +4,9 @@ const Footer = () => {
   const [lastUpdated, setLastUpdated] = useState('');
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/tmanatkin/atkin/commits?per_page=1')
+    fetch(
+      'https://api.github.com/repos/tmanatkin/tanner-atkin-xyz/commits?per_page=1',
+    )
       .then((response) => response.json())
       .then((data) => {
         // format date
@@ -24,7 +26,11 @@ const Footer = () => {
   return (
     <footer>
       <p>Created by Tanner Atkin</p>
-      <a href="https://github.com/tmanatkin/atkin" target="_blank">
+      <a
+        href="https://github.com/tmanatkin/tanner-atkin-xyz"
+        target="_blank"
+        rel="noreferrer"
+      >
         GitHub Repository
         <svg height="16" viewBox="0 0 16 16" width="16">
           <path
