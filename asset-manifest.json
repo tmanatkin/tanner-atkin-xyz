@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.4578dd2a.css",
-    "main.js": "/static/js/main.9641adef.js",
+    "main.css": "/static/css/main.2e13a069.css",
+    "main.js": "/static/js/main.3d34adba.js",
     "static/js/453.906b0208.chunk.js": "/static/js/453.906b0208.chunk.js",
-    "static/media/tanner-atkin-nobg.png": "/static/media/tanner-atkin-nobg.3171830a032825809298.png",
     "index.html": "/index.html",
-    "main.4578dd2a.css.map": "/static/css/main.4578dd2a.css.map",
-    "main.9641adef.js.map": "/static/js/main.9641adef.js.map",
+    "main.2e13a069.css.map": "/static/css/main.2e13a069.css.map",
+    "main.3d34adba.js.map": "/static/js/main.3d34adba.js.map",
     "453.906b0208.chunk.js.map": "/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4578dd2a.css",
-    "static/js/main.9641adef.js"
+    "static/css/main.2e13a069.css",
+    "static/js/main.3d34adba.js"
   ]
 }
