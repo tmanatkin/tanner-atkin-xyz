@@ -1,5 +1,5 @@
 import RotatingTitle from './RotatingTitle';
-import headerImg from '../assets/images/tanner-atkin-nobg.png';
+import headerImg from '/images/tanner-atkin-nobg.png';
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
         </h1>
         <RotatingTitle />
       </div>
-      <img src={headerImg} alt="Picture of Tanner Smiling"></img>
+      <img src={headerImg} alt="Tanner Smiling"></img>
     </header>
   );
 };

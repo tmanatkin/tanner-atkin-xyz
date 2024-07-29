@@ -146,7 +146,7 @@ section h2 {
   margin: 0;
 }
 
-.hover-gradient-button {
+.gradient-button {
   background-image: var(--background-gradient);
   background-attachment: fixed;
   padding: 0px;
@@ -158,16 +158,16 @@ section h2 {
   transition: 0.3s;
 }
 
-/* Hover Gradient Button */
+/* Gradient Button */
 
-.hover-gradient-button .button-background {
+.gradient-button .button-background {
   background-color: transparent;
   border-radius: 2px;
   transition: 0.3s;
   padding: 8px;
 }
 
-.hover-gradient-button span {
+.gradient-button span {
   display: flex;
   padding: 20px 50px;
   color: var(--color-offwhite);
@@ -178,17 +178,19 @@ section h2 {
   transition: 0.3s;
 }
 
-.hover-gradient-button:hover {
-  padding: 8px;
-}
+@media (hover: hover) {
+  .gradient-button:hover {
+    padding: 8px;
+  }
 
-.hover-gradient-button:hover .button-background {
-  background-color: var(--color-offwhite);
-  padding: 0px;
-}
+  .gradient-button:hover .button-background {
+    background-color: var(--color-offwhite);
+    padding: 0px;
+  }
 
-.hover-gradient-button:hover span {
-  color: transparent;
+  .gradient-button:hover span {
+    color: transparent;
+  }
 }
 
 /* Skills */
@@ -288,8 +290,10 @@ section h2 {
   transition: width 0.75s;
 }
 
-.contact-line:hover > p::after {
-  width: 100%;
+@media (hover: hover) {
+  .contact-line:hover > p::after {
+    width: 100%;
+  }
 }
 
 /* Footer */
@@ -326,10 +330,6 @@ footer a {
 
 footer p:last-child {
   text-align: right;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 /* Smaller Desktop Display */
