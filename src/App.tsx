@@ -2,7 +2,9 @@
 import Header from './components/Header';
 import Main from './components/Main';
 import Skills from './components/Skills';
+import SideBySideSections from './components/SideBySideSection';
 import Resume from './components/Resume';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 // styles
@@ -15,7 +17,10 @@ function App() {
       <Header />
       <Main>
         <Skills />
-        <Resume />
+        <SideBySideSections>
+          <Contact />
+          <Resume />
+        </SideBySideSections>
       </Main>
       <Footer />
     </>

@@ -158,6 +158,8 @@ section h2 {
   transition: 0.3s;
 }
 
+/* Hover Gradient Button */
+
 .hover-gradient-button .button-background {
   background-color: transparent;
   border-radius: 2px;
@@ -214,10 +216,80 @@ section h2 {
   background-attachment: fixed;
 }
 
+/* Side By Side Sections */
+
+.sideBySideSectionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
 /* Resume */
 
 .resume-section {
-  gap: 15px;
+  gap: 40px;
+}
+
+/* Contact */
+
+.contact-section {
+  gap: 40px;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75em;
+}
+
+.contact-line {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.contact-line {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.contact-line p {
+  position: relative;
+  margin: 0;
+  line-height: 1.6em;
+  color: transparent;
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.contact-line svg {
+  width: 2.5em;
+  height: 2.5em;
+  fill: var(--color-offwhite);
+  border: 1px solid var(--color-offwhite);
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+}
+
+.contact-line p::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-image: var(--background-gradient);
+  background-attachment: fixed;
+  transition: width 0.75s;
+}
+
+.contact-line:hover > p::after {
+  width: 100%;
 }
 
 /* Footer */
@@ -260,11 +332,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer svg {
-  fill: var(--color-darkgrey);
-  margin: 0 0 0 5px;
-}
-
 /* Smaller Desktop Display */
 
 @media only screen and (max-width: 1500px) {
@@ -303,6 +370,11 @@ footer svg {
   section {
     width: 600px;
     max-width: 80vw;
+  }
+
+  .sideBySideSectionContainer {
+    flex-direction: column;
+    gap: 100px;
   }
 
   .skill-section div {
@@ -346,11 +418,6 @@ footer svg {
   footer p {
     font-size: 0.75em;
   }
-
-  footer svg {
-    height: 0.75em;
-    width: 0.75em;
-  }
 }
 
 /* Mobile */
@@ -362,6 +429,10 @@ footer svg {
 
   h2 {
     width: 80%;
+  }
+
+  .contact-line {
+    font-size: 1.15em;
   }
 
   footer a {
