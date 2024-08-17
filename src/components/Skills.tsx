@@ -1,16 +1,24 @@
 const skills = [
   'Node.js',
   'JavaScript',
-  'HTML',
-  'CSS',
+  'React',
   'Python',
   'SQL',
-  'ASP.NET',
   'C#',
+  'HTML',
+  'CSS',
+  'ASP.NET',
+  'MySQL',
   'Postgres',
   'AWS',
   'GitHub',
+  'ChatGPT',
+  'C++',
+  'Unity',
 ];
+
+// Node.js, JavaScript, Python, SQL, C#, HTML, CSS, ASP.NET, MySQL, Postgres, AWS, GitHub, ChatGPT
+// React, jQuery, C++, Unity Game Development, 3D Modeling, and Graphic Design
 
 const Skills = () => {
   return (

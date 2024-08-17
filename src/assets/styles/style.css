@@ -8,18 +8,7 @@
   --color-darkgrey: #555;
   --color-lightgrey: #aaa;
   --color-superlightgrey: #ddd;
-  /* --background-gradient: linear-gradient(to bottom right, red, orange, yellow); */
-  --background-gradient: linear-gradient(
-    to top left,
-    #d7b91f,
-    /* #daa705,
-    #dd9500,
-    #de8200,
-    #de6e00,
-    #dc5803,
-    #d93f12, */
-      #d51d1d
-  );
+  --background-gradient: linear-gradient(to top left, #d7b91f, #d51d1d);
 }
 
 body {
@@ -238,11 +227,16 @@ section h2 {
   gap: 40px;
 }
 
-.contact-information {
+.contact-column {
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 0.75em;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
 }
 
 .contact-line {
@@ -401,6 +395,11 @@ footer p:last-child {
 
   h2 {
     font-size: 2em;
+  }
+
+  .contact-information {
+    flex-direction: column;
+    gap: 0.75em;
   }
 
   footer {

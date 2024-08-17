@@ -2,7 +2,6 @@
 import Header from './components/Header';
 import Main from './components/Main';
 import Skills from './components/Skills';
-import SideBySideSections from './components/SideBySideSection';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -17,10 +16,8 @@ function App() {
       <Header />
       <Main>
         <Skills />
-        <SideBySideSections>
-          <Contact />
-          <Resume />
-        </SideBySideSections>
+        <Contact />
+        <Resume />
       </Main>
       <Footer />
     </>

@@ -2,14 +2,12 @@ import styled, { keyframes } from 'styled-components';
 
 // displayed titles
 const titles = [
-  'BYU Student',
-  'Programmer',
+  'Full-Stack Dev',
   'Problem Solver',
   'Software Engineer',
+  'BYU Student',
   'AI Enthusiast',
-  'Web Developer',
-  'Graphic Designer',
-  'Data Analyst',
+  'Coding Wizard',
 ];
 
 // seconds per title
