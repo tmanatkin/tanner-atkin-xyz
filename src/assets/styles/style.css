@@ -1,14 +1,11 @@
 /* CSS */
 
 :root {
-  --color-primary: #cc603e;
-  --color-secondary: #1f005c;
+  --primary-gradient: linear-gradient(to top left, #db1414, #ecc80c);
   --color-offwhite: #fafafa;
   --color-offblack: #222;
   --color-darkgrey: #555;
-  --color-lightgrey: #aaa;
-  --color-superlightgrey: #ddd;
-  --background-gradient: linear-gradient(to top left, #d7b91f, #d51d1d);
+  --color-lightgrey: #ddd;
 }
 
 body {
@@ -68,7 +65,7 @@ h1 {
 
 #name-container > h1 span {
   color: transparent;
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   background-attachment: fixed;
@@ -115,7 +112,7 @@ header img {
   margin: 0;
   padding: 0;
   border-radius: 100%;
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
 }
 
@@ -136,7 +133,7 @@ section h2 {
 }
 
 .gradient-button {
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
   padding: 0px;
   border-radius: 5px;
@@ -160,7 +157,7 @@ section h2 {
   display: flex;
   padding: 20px 50px;
   color: var(--color-offwhite);
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
@@ -203,7 +200,7 @@ section h2 {
   padding: 0.25em 0.5em;
   border-radius: 0.75em;
   color: var(--color-offwhite);
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
 }
 
@@ -257,7 +254,7 @@ section h2 {
   margin: 0;
   line-height: 1.6em;
   color: transparent;
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
@@ -269,7 +266,7 @@ section h2 {
   fill: var(--color-offwhite);
   margin: 0;
   border: none;
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
   shape-rendering: geometricPrecision;
 }
@@ -281,7 +278,7 @@ section h2 {
   left: 0;
   bottom: 0;
   width: 0;
-  background-image: var(--background-gradient);
+  background-image: var(--primary-gradient);
   background-attachment: fixed;
   transition: width 0.75s;
 }
@@ -302,7 +299,7 @@ footer {
   width: calc(100% - 100px);
   padding: 0px 50px;
   margin: 50px 0 0 0;
-  background-color: var(--color-superlightgrey);
+  background-color: var(--color-lightgrey);
 }
 
 footer p {
