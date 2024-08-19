@@ -1,12 +1,42 @@
 /* CSS */
 
 :root {
-  --primary-gradient: linear-gradient(to top left, #db1414, #ecc80c);
+  --primary-gradient: linear-gradient(
+    to bottom right,
+    #ecc80c,
+    #db1414,
+    #8d34b4,
+    #1942ba,
+    #22a039,
+    #e6c745,
+    #db1414
+  );
+  --gradient-animation: moveGradient 5s linear infinite;
+  --gradient-size: 600% 600%;
   --color-offwhite: #fafafa;
   --color-offblack: #222;
   --color-darkgrey: #555;
   --color-lightgrey: #ddd;
 }
+
+#test {
+  width: 200%;
+  height: 1000px;
+  background-image: var(--primary-gradient);
+}
+
+/* Animation */
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* General */
 
 body {
   margin: 0;
@@ -66,6 +96,8 @@ h1 {
 #name-container > h1 span {
   color: transparent;
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-clip: text;
   -webkit-background-clip: text;
   background-attachment: fixed;
@@ -113,6 +145,8 @@ header img {
   padding: 0;
   border-radius: 100%;
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
 }
 
@@ -132,10 +166,15 @@ section h2 {
   margin: 0;
 }
 
+/* Gradient Button */
+
 .gradient-button {
+  position: relative;
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
-  padding: 0px;
+  padding: 8px;
   border-radius: 5px;
   font-size: 1.5em;
   font-weight: 600;
@@ -144,34 +183,37 @@ section h2 {
   transition: 0.3s;
 }
 
-/* Gradient Button */
-
-.gradient-button .button-background {
+.gradient-button::after {
   background-color: transparent;
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 2px;
   transition: 0.3s;
-  padding: 8px;
 }
 
 .gradient-button span {
+  position: relative;
   display: flex;
   padding: 20px 50px;
   color: var(--color-offwhite);
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
+  z-index: 1;
   transition: 0.3s;
 }
 
 @media (hover: hover) {
-  .gradient-button:hover {
-    padding: 8px;
-  }
-
-  .gradient-button:hover .button-background {
+  .gradient-button:hover::after {
     background-color: var(--color-offwhite);
-    padding: 0px;
+    margin: 8px;
   }
 
   .gradient-button:hover span {
@@ -201,6 +243,8 @@ section h2 {
   border-radius: 0.75em;
   color: var(--color-offwhite);
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
 }
 
@@ -255,6 +299,8 @@ section h2 {
   line-height: 1.6em;
   color: transparent;
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
@@ -267,6 +313,8 @@ section h2 {
   margin: 0;
   border: none;
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
   shape-rendering: geometricPrecision;
 }
@@ -279,6 +327,8 @@ section h2 {
   bottom: 0;
   width: 0;
   background-image: var(--primary-gradient);
+  animation: var(--gradient-animation);
+  background-size: var(--gradient-size);
   background-attachment: fixed;
   transition: width 0.75s;
 }

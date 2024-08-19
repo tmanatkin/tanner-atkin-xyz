@@ -1,4 +1,4 @@
-const Header = () => {
+const Resume = () => {
   return (
     <section className="resume-section">
       <h2>Take a look at my resume.</h2>
@@ -7,12 +7,10 @@ const Header = () => {
         href="Tanner_Atkin_Resume.pdf"
         target="_blank"
       >
-        <div className="button-background">
-          <span>Download</span>
-        </div>
+        <span>Download</span>
       </a>
     </section>
   );
 };
 
-export default Header;
+export default Resume;
