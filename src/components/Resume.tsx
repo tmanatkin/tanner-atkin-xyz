@@ -3,11 +3,11 @@ const Resume = () => {
     <section className="resume-section">
       <h2>Take a look at my resume.</h2>
       <a
-        className="gradient-button"
+        className="gradient-button gradient-background"
         href="Tanner_Atkin_Resume.pdf"
         target="_blank"
       >
-        <span>Download</span>
+        <span className="gradient-background">Download</span>
       </a>
     </section>
   );

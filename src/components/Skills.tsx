@@ -25,8 +25,10 @@ const Skills = () => {
     <section className="skill-section primary-bg-section">
       <h2>Here's some skills that I've learned</h2>
       <div>
-        {skills.map((skill) => (
-          <h3>{skill}</h3>
+        {skills.map((skill, index) => (
+          <h3 className="gradient-background" key={index}>
+            {skill}
+          </h3>
         ))}
       </div>
     </section>

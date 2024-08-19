@@ -5,11 +5,15 @@ const Header = () => {
     <header>
       <div id="name-container">
         <h1>
-          Hi, I'm <span>Tanner</span>.
+          Hi, I'm <span className="gradient-background">Tanner</span>.
         </h1>
         <RotatingTitle />
       </div>
-      <img src="/images/tanner-atkin-nobg.png" alt="Tanner Smiling"></img>
+      <img
+        className="gradient-background"
+        src="/images/tanner-atkin-nobg.png"
+        alt="Tanner Smiling"
+      ></img>
     </header>
   );
 };

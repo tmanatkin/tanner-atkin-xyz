@@ -1,17 +1,20 @@
 /* CSS */
 
-:root {
+html {
   --primary-gradient: linear-gradient(
     to bottom right,
     #ecc80c,
     #db1414,
-    #8d34b4,
-    #1942ba,
-    #22a039,
-    #e6c745,
+    #5e0683,
+    #0d3fd5,
+    #0b621a,
+    #ecc80c,
     #db1414
   );
-  --gradient-animation: moveGradient 5s linear infinite;
+
+  --gradient-animation: moveGradient 1s ease-in-out;
+  --gradient-animation-position-start: 0% 0%;
+  --gradient-animation-position-end: 0% 0%;
   --gradient-size: 600% 600%;
   --color-offwhite: #fafafa;
   --color-offblack: #222;
@@ -19,21 +22,28 @@
   --color-lightgrey: #ddd;
 }
 
-#test {
-  width: 200%;
-  height: 1000px;
-  background-image: var(--primary-gradient);
-}
-
 /* Animation */
 
 @keyframes moveGradient {
   0% {
-    background-position: 0% 0%;
+    background-position: var(--gradient-animation-position-start);
   }
   100% {
-    background-position: 100% 100%;
+    background-position: var(--gradient-animation-position-end);
   }
+}
+
+.animate,
+.contact-line p.animate::after {
+  animation: var(--gradient-animation);
+}
+
+.gradient-background,
+.contact-line p.gradient-background::after {
+  background-position: var(--gradient-animation-position-end);
+  background-image: var(--primary-gradient);
+  background-size: var(--gradient-size);
+  background-attachment: fixed;
 }
 
 /* General */
@@ -66,7 +76,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 110px;
   padding: 0 0 25px 0;
 }
 
@@ -95,12 +105,8 @@ h1 {
 
 #name-container > h1 span {
   color: transparent;
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
   background-clip: text;
   -webkit-background-clip: text;
-  background-attachment: fixed;
 }
 
 #rotating-title-container {
@@ -144,16 +150,13 @@ header img {
   margin: 0;
   padding: 0;
   border-radius: 100%;
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
 }
 
 /* Sections */
 
 section {
   width: 1300px;
+  gap: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,10 +173,6 @@ section h2 {
 
 .gradient-button {
   position: relative;
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
   padding: 8px;
   border-radius: 5px;
   font-size: 1.5em;
@@ -200,10 +199,6 @@ section h2 {
   display: flex;
   padding: 20px 50px;
   color: var(--color-offwhite);
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
   z-index: 1;
@@ -223,10 +218,6 @@ section h2 {
 
 /* Skills */
 
-.skill-section {
-  gap: 50px;
-}
-
 .skill-section div {
   display: flex;
   flex-direction: row;
@@ -242,10 +233,6 @@ section h2 {
   padding: 0.25em 0.5em;
   border-radius: 0.75em;
   color: var(--color-offwhite);
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
 }
 
 /* Side By Side Sections */
@@ -256,17 +243,7 @@ section h2 {
   align-items: start;
 }
 
-/* Resume */
-
-.resume-section {
-  gap: 40px;
-}
-
 /* Contact */
-
-.contact-section {
-  gap: 40px;
-}
 
 .contact-column {
   display: flex;
@@ -298,10 +275,6 @@ section h2 {
   margin: 0;
   line-height: 1.6em;
   color: transparent;
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -312,10 +285,6 @@ section h2 {
   fill: var(--color-offwhite);
   margin: 0;
   border: none;
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
   shape-rendering: geometricPrecision;
 }
 
@@ -326,10 +295,6 @@ section h2 {
   left: 0;
   bottom: 0;
   width: 0;
-  background-image: var(--primary-gradient);
-  animation: var(--gradient-animation);
-  background-size: var(--gradient-size);
-  background-attachment: fixed;
   transition: width 0.75s;
 }
 
