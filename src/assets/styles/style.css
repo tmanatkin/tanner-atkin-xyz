@@ -3,19 +3,18 @@
 html {
   --primary-gradient: linear-gradient(
     to bottom right,
-    #ecc80c,
-    #db1414,
-    #5e0683,
-    #0d3fd5,
-    #0b621a,
-    #ecc80c,
-    #db1414
+    #ecc80c 0%,
+    #db1414 25%,
+    #1046e6 50%,
+    #10e670 63%,
+    #ecc80c 75%,
+    #db1414 100%
   );
 
   --gradient-animation: moveGradient 1s ease-in-out;
   --gradient-animation-position-start: 0% 0%;
   --gradient-animation-position-end: 0% 0%;
-  --gradient-size: 600% 600%;
+  --gradient-size: 400% 400%;
   --color-offwhite: #fafafa;
   --color-offblack: #222;
   --color-darkgrey: #555;

@@ -1,44 +1,44 @@
 const ColorChange = () => {
-  // possible background positions
-  const positions = [
-    '0% 0%',
-    '20% 20%',
-    '40% 40%',
-    '60% 60%',
-    '80% 80%',
-    '100% 100%',
-  ];
+  let currentPosition = '0% 0%';
 
-  let currentPosition = 0;
-
-  function changeGradient(direction: number): void {
+  function changeGradient(newPosition: string): void {
     // reset position to loop end to end
-    if (direction === 1 && currentPosition === positions.length - 1) {
-      currentPosition = 0;
-    } else if (direction === -1 && currentPosition === 0) {
-      currentPosition = positions.length - 1;
+
+    if (currentPosition === '67% 67%' && newPosition === '0% 0%') {
+      newPosition = '100% 100%';
+    } else if (currentPosition === '0% 0%' && newPosition === '67% 67%') {
+      currentPosition = '100% 100%';
     }
 
     // set starting position
     document.documentElement.style.setProperty(
       '--gradient-animation-position-start',
-      `${positions[currentPosition]}`,
+      `${currentPosition}`,
     );
-
-    // increment position
-    currentPosition += direction;
 
     // set ending (new current) position
     document.documentElement.style.setProperty(
       '--gradient-animation-position-end',
-      `${positions[currentPosition]}`,
+      `${newPosition}`,
     );
 
+    if (newPosition === '100% 100%') {
+      currentPosition = '0% 0%';
+    } else {
+      currentPosition = newPosition;
+    }
+
     const elements = document.querySelectorAll('.gradient-background');
+    const buttons = document.querySelectorAll('.color-change-button');
 
     // toggle animation class for all elements to trigger animation
     elements.forEach((element) => {
       element.classList.add('animate');
+    });
+
+    // toggle animation class for all elements to trigger animation
+    buttons.forEach((button) => {
+      (button as HTMLButtonElement).disabled = true;
     });
 
     // wait till animation ends to remove
@@ -47,6 +47,10 @@ const ColorChange = () => {
         'animationend',
         () => {
           element.classList.remove('animate');
+
+          buttons.forEach((button) => {
+            (button as HTMLButtonElement).disabled = false;
+          });
         },
         { once: true },
       );
@@ -56,8 +60,24 @@ const ColorChange = () => {
   return (
     <section>
       <h2>Change Colors...?</h2>
-      <button onClick={() => changeGradient(-1)}>Previous</button>
-      <button onClick={() => changeGradient(1)}>Next</button>
+      <button
+        className="color-change-button"
+        onClick={() => changeGradient('0% 0%')}
+      >
+        Orange
+      </button>
+      <button
+        className="color-change-button"
+        onClick={() => changeGradient('33% 33%')}
+      >
+        Purple
+      </button>
+      <button
+        className="color-change-button"
+        onClick={() => changeGradient('67% 67%')}
+      >
+        Green
+      </button>
     </section>
   );
 };
