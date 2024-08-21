@@ -1,16 +1,24 @@
 /* CSS */
 
 html {
-  --primary-gradient: linear-gradient(
+  --gradient-color-1: #ecc80c;
+  --gradient-1-2: #ecc608, #edbb00, #ed9b00, #e76000, #df340b, #dc1a13;
+  --gradient-color-2: #db1414;
+  --gradient-2-3: #dc0b18, #e1002d, #e20060, #af00b5, #6238dc, #2644e5;
+  --gradient-color-3: #1046e6;
+  --gradient-3-1: #0072ff, #008ff3, #00a6c5, #00b889, #00c54b, #8dcb00;
+  --background-gradient: linear-gradient(
     to bottom right,
-    #ecc80c 0%,
-    #db1414 25%,
-    #1046e6 50%,
-    #10e670 63%,
-    #ecc80c 75%,
-    #db1414 100%
+    var(--gradient-color-1),
+    var(--gradient-1-2),
+    var(--gradient-color-2),
+    var(--gradient-2-3),
+    var(--gradient-color-3),
+    var(--gradient-3-1),
+    var(--gradient-color-1),
+    var(--gradient-1-2),
+    var(--gradient-color-2)
   );
-
   --gradient-animation: moveGradient 1s ease-in-out;
   --gradient-animation-position-start: 0% 0%;
   --gradient-animation-position-end: 0% 0%;
@@ -40,7 +48,7 @@ html {
 .gradient-background,
 .contact-line p.gradient-background::after {
   background-position: var(--gradient-animation-position-end);
-  background-image: var(--primary-gradient);
+  background-image: var(--background-gradient);
   background-size: var(--gradient-size);
   background-attachment: fixed;
 }
@@ -301,6 +309,54 @@ section h2 {
   .contact-line:hover > p::after {
     width: 100%;
   }
+}
+
+/* Color Changing Section */
+
+.color-change-button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.color-change-button {
+  border-radius: 5px;
+  border: none;
+  width: 75px;
+  height: 75px;
+  transition: 0.3s;
+}
+
+.color-change-button:enabled:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#color-change-button-0 {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--gradient-color-1),
+    var(--gradient-1-2),
+    var(--gradient-color-2)
+  );
+}
+
+#color-change-button-1 {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--gradient-color-2),
+    var(--gradient-2-3),
+    var(--gradient-color-3)
+  );
+}
+
+#color-change-button-2 {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--gradient-color-3),
+    var(--gradient-3-1),
+    var(--gradient-color-1)
+  );
 }
 
 /* Footer */

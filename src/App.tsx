@@ -17,8 +17,8 @@ function App() {
       <Header />
       <Main>
         <Skills />
-        <Contact />
         <ColorChange />
+        <Contact />
         <Resume />
       </Main>
       <Footer />

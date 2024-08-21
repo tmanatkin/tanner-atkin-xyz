@@ -80,27 +80,23 @@ const ColorChange = () => {
   return (
     <section>
       <h2>Change Colors...?</h2>
-      <button
-        id="color-change-button-0"
-        className="color-change-button"
-        onClick={() => changeGradient(0)}
-      >
-        Orange
-      </button>
-      <button
-        id="color-change-button-1"
-        className="color-change-button"
-        onClick={() => changeGradient(1)}
-      >
-        Purple
-      </button>
-      <button
-        id="color-change-button-2"
-        className="color-change-button"
-        onClick={() => changeGradient(2)}
-      >
-        Green
-      </button>
+      <div className="color-change-button-container">
+        <button
+          id="color-change-button-0"
+          className="color-change-button"
+          onClick={() => changeGradient(0)}
+        ></button>
+        <button
+          id="color-change-button-1"
+          className="color-change-button"
+          onClick={() => changeGradient(1)}
+        ></button>
+        <button
+          id="color-change-button-2"
+          className="color-change-button"
+          onClick={() => changeGradient(2)}
+        ></button>
+      </div>
     </section>
   );
 };
