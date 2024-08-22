@@ -4,9 +4,9 @@ html {
   --gradient-color-1: #ecc80c;
   --gradient-1-2: #ecc608, #edbb00, #ed9b00, #e76000, #df340b, #dc1a13;
   --gradient-color-2: #db1414;
-  --gradient-2-3: #dc0b18, #e1002d, #e20060, #af00b5, #6238dc, #2644e5;
+  --gradient-2-3: #dc081b, #de003b, #d5007a, #9e00d2, #5a1fe8, #2342e7;
   --gradient-color-3: #1046e6;
-  --gradient-3-1: #0072ff, #008ff3, #00a6c5, #00b889, #00c54b, #8dcb00;
+  --gradient-3-1: #0065fc, #008fe2, #00b5c6, #22cc8a, #b6cf25, #e5c902;
   --background-gradient: linear-gradient(
     to bottom right,
     var(--gradient-color-1),
