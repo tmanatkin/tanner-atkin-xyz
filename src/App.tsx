@@ -11,6 +11,7 @@ import ColorChange from './components/ColorChange';
 import './assets/styles/normalize.css';
 import './assets/styles/style.css';
 
+// app
 function App() {
   return (
     <>

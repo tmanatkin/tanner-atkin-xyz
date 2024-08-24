@@ -78,7 +78,7 @@ const ColorChange = () => {
   }
 
   return (
-    <section>
+    <section className="color-change-section gradient-background">
       <h2>Change Colors...?</h2>
       <div className="color-change-button-container">
         <button

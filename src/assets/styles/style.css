@@ -56,6 +56,7 @@ html {
 /* General */
 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -313,6 +314,28 @@ section h2 {
 
 /* Color Changing Section */
 
+.color-change-section {
+  height: 75vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-change-section::after {
+  background-color: var(--color-offwhite);
+  border-radius: 5px;
+  height: calc(75vh - 100px);
+  width: 1200px;
+  position: absolute;
+  content: '';
+}
+
+.color-change-section > * {
+  z-index: 1;
+}
+
 .color-change-button-container {
   display: flex;
   flex-direction: row;
@@ -325,6 +348,10 @@ section h2 {
   width: 75px;
   height: 75px;
   transition: 0.3s;
+}
+
+.color-change-button:disabled {
+  opacity: 0.5;
 }
 
 .color-change-button:enabled:hover {
@@ -399,6 +426,10 @@ footer p:last-child {
     width: 1000px;
   }
 
+  .color-change-section::after {
+    width: 900px;
+  }
+
   .skill-section div {
     gap: 40px 50px;
   }
@@ -425,6 +456,11 @@ footer p:last-child {
   section {
     width: 600px;
     max-width: 80vw;
+  }
+
+  .color-change-section::after {
+    width: 500px;
+    max-width: calc(80vw - 100px);
   }
 
   .sideBySideSectionContainer {
@@ -509,6 +545,10 @@ footer p:last-child {
 
   section {
     width: 310px;
+  }
+
+  .color-change-section::after {
+    width: 210px;
   }
 
   #cardContainer {
