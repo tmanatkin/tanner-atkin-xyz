@@ -5,7 +5,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
-import ColorChange from './components/ColorChange';
+// import ColorChange from './components/ColorChange';
 
 // styles
 import './assets/styles/normalize.css';
@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Main>
         <Skills />
-        <ColorChange />
+        {/* <ColorChange /> */}
         <Contact />
         <Resume />
       </Main>

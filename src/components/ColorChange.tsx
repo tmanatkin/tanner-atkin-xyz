@@ -51,7 +51,16 @@ const ColorChange = () => {
     // toggle animation class for all elements to trigger animation
     buttons.forEach((button) => {
       (button as HTMLButtonElement).disabled = true;
+      (button as HTMLButtonElement).classList.remove(
+        'color-change-button-active',
+      );
     });
+
+    (
+      document.getElementById(
+        `color-change-button-${currentPosition}`,
+      ) as HTMLButtonElement
+    ).classList.add('color-change-button-active');
 
     // wait till animation ends
     elements.forEach((element) => {
@@ -79,7 +88,7 @@ const ColorChange = () => {
 
   return (
     <section className="color-change-section gradient-background">
-      <h2>Change Colors...?</h2>
+      <h2>Change up the colors.</h2>
       <div className="color-change-button-container">
         <button
           id="color-change-button-0"

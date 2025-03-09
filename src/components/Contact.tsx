@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section className="contact-section">
-      <h2>Get in touch with me.</h2>
+      <h2>Lets get in touch.</h2>
       <div className="contact-information">
         <div className="contact-column">
           <a

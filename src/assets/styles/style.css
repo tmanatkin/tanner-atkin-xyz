@@ -343,20 +343,34 @@ section h2 {
 }
 
 .color-change-button {
-  border-radius: 5px;
+  border-radius: 100%;
   border: none;
   width: 75px;
   height: 75px;
-  transition: 0.3s;
+  outline: 2px solid transparent;
+  outline-offset: -10px;
+  transition:
+    outline 0.3s,
+    outline-offset 0.3s;
+}
+
+.color-change-button-active {
+  outline: 5px solid var(--color-offwhite);
+  outline-offset: -15px;
 }
 
 .color-change-button:disabled {
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
-.color-change-button:enabled:hover {
+.color-change-button:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  outline: 2px solid var(--color-offwhite);
+}
+
+.color-change-button.color-change-button-active:hover {
+  cursor: default;
+  outline: 5px solid var(--color-offwhite);
 }
 
 #color-change-button-0 {
