@@ -105,7 +105,7 @@ header {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: 700;
   margin: 0;
   color: var(--color-offblack);
@@ -120,7 +120,7 @@ h1 {
 #rotating-title-container {
   background-color: var(--color-offwhite);
   position: relative;
-  height: 6em;
+  height: 6rem;
   margin: 0;
   display: inline-block;
   overflow: hidden;
@@ -132,7 +132,7 @@ h1 {
   position: absolute;
   left: 0;
   right: 0;
-  height: 0.75em;
+  height: 0.75rem;
   z-index: 1;
 }
 
@@ -173,7 +173,7 @@ section {
 section h2 {
   text-align: center;
   color: var(--color-offblack);
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -183,7 +183,7 @@ section h2 {
   position: relative;
   padding: 8px;
   border-radius: 5px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
@@ -236,10 +236,10 @@ section h2 {
 }
 
 .skill-section div h3 {
-  font-size: 3.25em;
+  font-size: 3.25rem;
   margin: 0;
-  padding: 0.25em 0.5em;
-  border-radius: 0.75em;
+  padding: 1rem 1.5rem;
+  border-radius: 3rem;
   color: var(--color-offwhite);
 }
 
@@ -256,7 +256,7 @@ section h2 {
 .contact-column {
   display: flex;
   flex-direction: column;
-  gap: 0.75em;
+  gap: 0.75rem;
 }
 
 .contact-information {
@@ -270,26 +270,26 @@ section h2 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.75em;
+  gap: 0.75rem;
 }
 
 .contact-line {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .contact-line p {
   position: relative;
   margin: 0;
-  line-height: 1.6em;
+  line-height: 2.5rem;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
 }
 
 .contact-line svg {
-  width: 2.5em;
-  height: 2.5em;
+  width: 3.75rem;
+  height: 3.75rem;
   fill: var(--color-offwhite);
   margin: 0;
   border: none;
@@ -449,11 +449,11 @@ footer p:last-child {
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   .skill-section div h3 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 }
 
@@ -494,12 +494,12 @@ footer p:last-child {
   }
 
   h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-align: center;
   }
 
   #rotating-title-container {
-    height: 4em;
+    height: 4rem;
   }
 
   header img {
@@ -507,16 +507,16 @@ footer p:last-child {
   }
 
   .skill-section div h3 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .contact-information {
     flex-direction: column;
-    gap: 0.75em;
+    gap: 0.75rem;
   }
 
   footer {
@@ -525,7 +525,7 @@ footer p:last-child {
   }
 
   footer p {
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 }
 
@@ -541,7 +541,7 @@ footer p:last-child {
   }
 
   .contact-line {
-    font-size: 1.15em;
+    font-size: 1.15rem;
   }
 }
 
@@ -570,7 +570,7 @@ footer p:last-child {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .skill-section div {
@@ -578,14 +578,14 @@ footer p:last-child {
   }
 
   .skill-section div h3 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .card h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
