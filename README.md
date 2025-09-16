@@ -1,3 +1,3 @@
-# tanner.atkin.xyz
+# tanneratkin.com
 
 Portfolio website for Tanner Atkin
