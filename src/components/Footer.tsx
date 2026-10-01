@@ -5,7 +5,7 @@ const Footer = () => {
 
   useEffect(() => {
     fetch(
-      'https://api.github.com/repos/tmanatkin/tanner-atkin-xyz/commits?per_page=1',
+      'https://api.github.com/repos/tmanatkin/portfolio-2024/commits?per_page=1',
     )
       .then((response) => response.json())
       .then((data) => {
