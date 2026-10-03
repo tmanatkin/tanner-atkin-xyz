@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 // displayed titles
-const titles = ["Full-Stack Dev", "Problem Solver", "Software Engineer", "BYU Student", "Coding Wizard"];
+const titles = ["Software Engineer", "Problem Solver", "Full-Stack Dev", "BYU Grad", "Web Dev Instructor"];
 
 // seconds per title
 let secondsPerTitle = 3;
