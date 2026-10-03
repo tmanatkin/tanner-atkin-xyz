@@ -6,6 +6,8 @@ Personal portfolio website for Tanner Atkin.
 ![TypeScript](https://img.shields.io/badge/TypeScript-222222?style=for-the-badge&logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-222222?style=for-the-badge&logo=vite)
 
+<img src=".github/preview.png" width="640" alt="Portfolio 2024">
+
 - Rotating header title animation that cycles through taglines
 - Viewport-fixed gradient that shifts color across elements on scroll
 - Contact links with animated underlines on hover
